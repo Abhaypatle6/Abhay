@@ -1,0 +1,138 @@
+/* Base styles for the "works" section */
+/* #works {
+    min-height: calc(100vh - 4rem);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.worksTitle {
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+.worksDesc {
+    margin: 1rem 0;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.worksImgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 65rem;
+}
+
+.worksImg {
+    object-fit: cover;
+    width: calc(33.33% - 1rem);
+    margin: 0.5rem;
+}
+
+.workBtn {
+    margin: 3rem 0;
+    padding: 0.5rem 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    background: white;
+    font-size: 1rem;
+} */
+
+/* Media query for smaller screens */
+/* @media screen and (max-width: 585px) {
+    .worksImg {
+        width: 100%;
+        height: auto;
+    }
+} */
+
+/* Base styles for the "works" section */
+#works {
+    min-height: calc(100vh - 4rem);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.worksTitle {
+    margin: 1rem 0;
+    font-size: 3rem;
+    position: relative; /* Add position relative for pseudo-element */
+    
+}
+
+.worksTitle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0be76e; /* Color of the underline */
+    transform: scaleX(0); /* Initially, no width */
+    transform-origin: left;
+    transition: transform 0.3s ease; /* Transition effect */
+}
+
+.worksTitle:hover::after {
+    transform: scaleX(1); /* Expand the underline on hover */
+}
+
+.worksDesc {
+    margin: 1rem 0;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.worksImgs {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 1.4rem; /* Add gap between images */
+    width: 100%;
+    max-width: 65rem;
+}
+
+.worksImg {
+    object-fit: cover;
+    width: calc(90% - 0.7rem); /* Adjust the width for smaller size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0.7rem;
+    border-radius: 30%; /* Make the images circular */
+    overflow: hidden; /* Ensure the circular shape is maintained */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+
+    /* Add a subtle shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.worksImg:hover {
+    transform: scale(1.1); /* Enlarge the image on hover */
+}
+
+.workBtn {
+    margin: 3rem 0;
+    padding: 0.5rem 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    background: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 585px) {
+    .worksImg {
+        width: 100%;
+        height: auto;
+    }
+}   

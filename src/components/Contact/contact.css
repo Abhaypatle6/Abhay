@@ -1,0 +1,183 @@
+#contactPage {
+    min-height: calc(100vh-4rem);
+    width: 90vw;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.contactPageTitle {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.clientDesc{
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+
+}
+/* .clientImgs{
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.clientImg{
+    object-fit: cover;
+    width: 43%;
+    min-width: 9rem;
+    margin: auto;
+    padding: 0.25rem;
+} */
+.clientImgs {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Center the images in the container */
+}
+
+.clientImg {
+    object-fit: cover;
+    width: 43%;
+    min-width: 9rem;
+    margin: 1rem;
+    padding: 0.25rem;
+    border: 2px solid #fff; /* Add a border for a cleaner look */
+    border-radius: 50px; /* Add border-radius for rounded corners */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+    animation: pulseAnimation 10s infinite ease-in-out; /* Continuous pulsating animation */
+
+    /* Add a subtle shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clientImg:hover {
+    transform: scale(1.05); /* Scale up the image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust the shadow on hover */
+    animation: none; /* Disable the continuous animation on hover */
+}
+
+@keyframes pulseAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Adjust the scale factor for pulsating effect */
+    }
+}
+
+#clients{
+    padding: 2rem;
+}
+
+.contactDesc {
+    display: flex;     
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center;
+    text-align: center; */
+    padding: 1rem;
+    font-size: medium;
+    font-weight: 300;
+}
+
+/* .contactForm {
+    margin: 1rem;
+    padding-left:30rem;
+    display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center;
+    width: 90vw;
+    max-width: 50rem;
+
+} */
+
+/* .name,
+.email,
+.msg {
+    font-size: medium;
+    width: 100%;
+    max-width: 30rem;
+    margin: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgb(59, 82, 88);
+} */
+
+/* .submitBtn {
+    justify-content: center;
+    background: white;
+    border: none;
+    border-radius: 2rem;
+    margin: 2rem;
+    padding: 0.75rem 3.5rem;
+} */
+
+/* Base styles for the contact form */
+.contactForm {
+    margin: 1rem auto; /* Center the form horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+    justify-content: center;
+    width: 90vw;
+    max-width: 50rem;
+    padding: 1rem; /* Add padding for spacing */
+}
+
+.name,
+.email,
+.msg {
+    font-size: medium;
+    width: 100%;
+    max-width: 30rem;
+    margin: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgb(59, 82, 88);
+}
+
+.submitBtn {
+    background: white;
+    border: none;
+    border-radius: 2rem;
+    margin: 1rem 0; /* Add margin for spacing */
+    padding: 0.75rem 3.5rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .contactForm {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+    
+    .submitBtn {
+        margin: 1rem; /* Add margin for spacing on smaller screens */
+    }
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.link {
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin: 0 0.75rem;
+    border-radius: 3rem;
+}

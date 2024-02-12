@@ -1,0 +1,117 @@
+#intro {
+    height: calc(100vh - 4rem);
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex; /* Added flexbox for layout */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space items apart */
+}
+
+.bg {
+    position:absolute;
+    top: 9rem;
+    right: 4rem;
+    z-index: -1;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 20%;
+    animation: pulse 40s infinite ease-in-out; /* Slow down the pulse animation */
+}
+
+/* Add vendor prefixes for broader browser support */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+    50% {
+        transform: scale(1.2);
+        filter: brightness(90%);
+    }
+    100% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+}
+
+.introContent {
+    width: 50%; /* Set text container width */
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.introName {
+    color: rgb(223, 186, 24);
+}
+
+.introPara {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+}
+.btn{
+    background: rgb(108, 143, 207);
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem ;
+    cursor: pointer;
+}
+.btnImg{
+    object-fit: cover;
+    margin: 0 0.25rem;
+    height: 1rem;
+}
+
+.introContent {
+    padding: 1rem; /* Reduced padding for smaller screens */
+    font-size: 2rem; /* Adjusted font size for smaller screens */
+}
+
+.hello {
+    font-size: 1.25rem; /* Adjusted font size for smaller screens */
+}
+
+.introPara {
+    font-size: 1rem; /* Adjusted font size for smaller screens */
+}
+
+@media screen and (max-width: 480px) {
+.bg {
+    right: -50vw; /* Adjusted positioning for smaller screens */
+}
+
+.introContent {
+    padding: 0.5rem; /* Further reduced padding for smaller screens */
+    font-size: 1.5rem; /* Further adjusted font size for smaller screens */
+}
+
+.hello {
+    font-size: 1rem; /* Further adjusted font size for smaller screens */
+}
+
+.introPara {
+    font-size: 0.875rem; /* Further adjusted font size for smaller screens */
+}
+
+.btn {
+    padding: 0.5rem 1rem; /* Reduced button padding for smaller screens */
+}
+
+.btnImg {
+    height: 0.75rem; /* Adjusted image height for smaller screens */
+}
+}
