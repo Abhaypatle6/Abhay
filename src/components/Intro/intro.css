@@ -148,8 +148,7 @@
 .imageContainer {
     width: 58%; /* Adjusted width for the image container */
     height: 87vh; /* Adjusted height for the image container */
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: 43px;
     position: relative; /* Ensure relative positioning */
     overflow: hidden; /* Hide any overflow to prevent unwanted scrolling */
 }
