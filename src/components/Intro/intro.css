@@ -146,16 +146,18 @@
     }
 }
 .imageContainer {
-    width: 50%; /* Adjusted width for the image container */
-    height: 70vh; /* Adjusted height for the image container */
+    width: 58%; /* Adjusted width for the image container */
+    height: 87vh; /* Adjusted height for the image container */
+    margin-top: 10px;
+    margin-bottom: 30px;
     position: relative; /* Ensure relative positioning */
     overflow: hidden; /* Hide any overflow to prevent unwanted scrolling */
 }
 
 .bg {
-    width: 100%; /* Ensure the image fills its container */
+    width: 95%; /* Ensure the image fills its container */
     height: 100%; /* Ensure the image fills its container */
     object-fit: cover; /* Maintain aspect ratio while covering the container */
-    border-radius: 20px; /* Apply border radius to match other styles */
+    border-radius: 80px; /* Apply border radius to match other styles */
 }
 

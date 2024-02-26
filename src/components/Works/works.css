@@ -96,16 +96,17 @@
 
 .worksImgs {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 1.4rem; /* Add gap between images */
+    gap: 1rem; /* Add gap between images */
     width: 100%;
     max-width: 65rem;
 }
 
 .worksImg {
     object-fit: cover;
-    width: calc(90% - 0.7rem); /* Adjust the width for smaller size */
+    width: calc(53% - 1.4rem); /* Adjust the width for smaller size */
+    max-width: 250px; /* Set maximum width for images */
     height: auto; /* Maintain aspect ratio */
     margin: 0.7rem;
     border-radius: 30%; /* Make the images circular */
@@ -115,6 +116,19 @@
     /* Add a subtle shadow for depth */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 768px) {
+    .worksImg {
+        width: calc(50% - 1.4rem); /* Adjust the width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .worksImg {
+        width: calc(100% - 1.4rem); /* Adjust the width for even smaller screens */
+    }
+}
+
 .projectInfo p {
     margin-top: 0.5rem; /* Add some space between the image and the project name */
     font-size: 1rem; /* Adjust the font size of the project name */
