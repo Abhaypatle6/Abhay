@@ -146,7 +146,7 @@
     }
 }
 .imageContainer {
-    width: 58%; /* Adjusted width for the image container */
+    width: 68%; /* Adjusted width for the image container */
     height: 87vh; /* Adjusted height for the image container */
     margin-top: 43px;
     position: relative; /* Ensure relative positioning */
