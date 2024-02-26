@@ -4,21 +4,21 @@
     max-width: 75rem;
     margin: 0 auto;
     overflow: hidden;
-    display: flex; /* Added flexbox for layout */
+    display: flex; /* Flexbox for layout */
     align-items: center; /* Center vertically */
     justify-content: space-between; /* Space items apart */
+    position: relative; /* Ensure relative positioning */
 }
 
 .bg {
-    position:absolute;
-    top: 9rem;
-    right: 4rem;
-    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%; /* Adjusted width for the image */
+    height: 90%;
     object-fit: cover;
-    max-width: 100%;
-    max-height: 70vh;
+    z-index: -1;
     border-radius: 20%;
-    animation: pulse 40s infinite ease-in-out; /* Slow down the pulse animation */
 }
 
 /* Add vendor prefixes for broader browser support */
@@ -38,13 +38,17 @@
 }
 
 .introContent {
-    width: 50%; /* Set text container width */
+    width: 45%; /* Adjusted width for the text container */
     padding: 2rem;
     font-size: 3rem;
     font-weight: 700;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 1; /* Ensure text is above the background */
+    position: relative; /* Ensure relative positioning for z-index to work */
+    background-color: rgba(14, 35, 59, 0.8); /* Add semi-transparent background */
+    border-radius: 20px; /* Add border radius */
 }
 
 .hello {
@@ -62,15 +66,19 @@
     letter-spacing: 0.5px;
     margin-top: 1rem;
 }
-.btn{
+
+.btn {
     background: rgb(108, 143, 207);
     margin: 1rem 0;
     padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 2rem ;
+    border-radius: 2rem;
     cursor: pointer;
+    display: inline-flex; /* Ensure inline display for responsiveness */
+    align-items: center; /* Align items vertically */
 }
-.btnImg{
+
+.btnImg {
     object-fit: cover;
     margin: 0 0.25rem;
     height: 1rem;
@@ -89,29 +97,65 @@
     font-size: 1rem; /* Adjusted font size for smaller screens */
 }
 
+@media screen and (max-width: 768px) {
+    #intro {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .bg {
+        width: 100%; /* Full width for smaller screens */
+        height: 50%; /* Adjusted height for the image */
+        top: auto; /* Remove top positioning */
+        bottom: 0; /* Align image to the bottom on smaller screens */
+        border-radius: 0; /* Remove border radius for smaller screens */
+    }
+
+    .introContent {
+        width: 100%; /* Full width for smaller screens */
+        padding: 1rem; /* Reduced padding for smaller screens */
+        text-align: center; /* Center align text on smaller screens */
+        font-size: 2rem; /* Adjusted font size for smaller screens */
+    }
+
+    .btn {
+        width: 50%; /* Set button width to half on smaller screens */
+    }
+}
+
 @media screen and (max-width: 480px) {
+    .introContent {
+        padding: 0.5rem; /* Further reduced padding for smaller screens */
+        font-size: 1.5rem; /* Further adjusted font size for smaller screens */
+    }
+
+    .hello {
+        font-size: 1rem; /* Further adjusted font size for smaller screens */
+    }
+
+    .introPara {
+        font-size: 0.875rem; /* Further adjusted font size for smaller screens */
+    }
+
+    .btn {
+        padding: 0.5rem 1rem; /* Reduced button padding for smaller screens */
+    }
+
+    .btnImg {
+        height: 0.75rem; /* Adjusted image height for smaller screens */
+    }
+}
+.imageContainer {
+    width: 40%; /* Adjusted width for the image container */
+    height: 90%; /* Adjusted height for the image container */
+    position: absolute; /* Ensure absolute positioning */
+    top: 0; /* Position the container at the top */
+    right: 0; /* Position the container at the right */
+}
+
 .bg {
-    right: -50vw; /* Adjusted positioning for smaller screens */
-}
-
-.introContent {
-    padding: 0.5rem; /* Further reduced padding for smaller screens */
-    font-size: 1.5rem; /* Further adjusted font size for smaller screens */
-}
-
-.hello {
-    font-size: 1rem; /* Further adjusted font size for smaller screens */
-}
-
-.introPara {
-    font-size: 0.875rem; /* Further adjusted font size for smaller screens */
-}
-
-.btn {
-    padding: 0.5rem 1rem; /* Reduced button padding for smaller screens */
-}
-
-.btnImg {
-    height: 0.75rem; /* Adjusted image height for smaller screens */
-}
+    width: 100%; /* Ensure the image fills its container */
+    height: 100%; /* Ensure the image fills its container */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+    border-radius: 20%; /* Apply border radius to match other styles */
 }

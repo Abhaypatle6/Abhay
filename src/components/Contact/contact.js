@@ -6,6 +6,7 @@ import codingninjaIcon from '../../assets/codingninja.jpeg';
 import LinkedinIcon from '../../assets/linkedin.png';
 import HackerRankIcon from '../../assets/hackerrank.jpeg';
 import InstagramIcon from '../../assets/instagram.png';
+import GithubIcon from '../../assets/Github.png';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -56,6 +57,9 @@ const Contact = () => {
             </a>
             <a href="https://www.instagram.com/a_star_abhay/">
             <img src={InstagramIcon} alt="Instagram" className="link" />
+            </a>
+            <a href="https://github.com/Abhaypatle6">
+            <img src={GithubIcon} alt="Github" className="link" />
             </a>
           </div>
         </form>

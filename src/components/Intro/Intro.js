@@ -15,7 +15,9 @@ const Intro = () => {
             <p className="introPara">CGPA-8.78</p>
             <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:0bac9728-b708-4d2b-b8cf-a9c79377918c"><button className="btn"><img src={btnImg} alt="Hire Me" className='btnImg' />Hire Me</button></a>
             </div>
+            <div className="imageContainer">
         <img src={bg} alt="Profile" className="bg" />
+        </div>
     </section>
   )
 }
