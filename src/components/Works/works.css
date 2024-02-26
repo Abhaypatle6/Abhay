@@ -115,6 +115,12 @@
     /* Add a subtle shadow for depth */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.projectInfo p {
+    margin-top: 0.5rem; /* Add some space between the image and the project name */
+    font-size: 1rem; /* Adjust the font size of the project name */
+    font-weight: bold; /* Make the project name bold */
+    color: azure;
+}
 .worksImg:hover {
     transform: scale(1.1); /* Enlarge the image on hover */
 }

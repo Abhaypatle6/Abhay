@@ -93,6 +93,7 @@
     padding: 0.5rem 3rem;
     margin: 0.25rem;
     background: rgb(30, 55, 71);
+    cursor: pointer;
   }
 
   @media screen and (max-width:720px) {

@@ -146,16 +146,16 @@
     }
 }
 .imageContainer {
-    width: 40%; /* Adjusted width for the image container */
-    height: 90%; /* Adjusted height for the image container */
-    position: absolute; /* Ensure absolute positioning */
-    top: 0; /* Position the container at the top */
-    right: 0; /* Position the container at the right */
+    width: 50%; /* Adjusted width for the image container */
+    height: 70vh; /* Adjusted height for the image container */
+    position: relative; /* Ensure relative positioning */
+    overflow: hidden; /* Hide any overflow to prevent unwanted scrolling */
 }
 
 .bg {
     width: 100%; /* Ensure the image fills its container */
     height: 100%; /* Ensure the image fills its container */
     object-fit: cover; /* Maintain aspect ratio while covering the container */
-    border-radius: 20%; /* Apply border radius to match other styles */
+    border-radius: 20px; /* Apply border radius to match other styles */
 }
+

@@ -14,6 +14,15 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const name = form.current['your_name'].value.trim();
+  const email = form.current['your_email'].value.trim();
+  const message = form.current['message'].value.trim();
+
+  if (name === '' || email === '' || message === '') {
+    alert('Please fill out all required fields.');
+    return;
+  }
+
     emailjs.sendForm('service_0gmmhh9', 'template_k7esayk', form.current, 'MtIMKBiyNZokt7089')
       .then((result) => {
         console.log(result.text);
@@ -21,6 +30,7 @@ const Contact = () => {
         alert('Email Sent!');
       }, (error) => {
         console.log(error.text);
+        alert('Failed to send email. Please try again later.');
       });
   };
   return (
@@ -28,12 +38,14 @@ const Contact = () => {
 
       <div id="clients">
         <h1 className="contactPageTitle">My Experience</h1>
-        <p className="clientDesc">I have had the opportunity to work with a diverse group of companies. Some of the notable companies I have worked with, include <b>Persistent Systems Pvt Ltd.</b> where 
-        I have Completed a 2-month intensive internship program focusing on Linux, Database Management System (DBMS), Data Structures and Algorithms (DSA), and Python .Developed proficiency in Linux system .
-        Gained hands-on experience in working with databases and SQL, improving database design and management skills. </p>
+        <p className="clientDesc">I have had the opportunity to work with a diverse group of companies. Some of the notable companies I have worked with, include <b>Persistent Systems Pvt Ltd.</b> where
+          I have Completed a 2-month intensive internship program focusing on Linux, Database Management System (DBMS), Data Structures and Algorithms (DSA), and Python .Developed proficiency in Linux system .
+          Gained hands-on experience in working with databases and SQL, improving database design and management skills. </p>
         <div className="clientImgs">
           <img src={Persistent} alt="Persistent Systems" className="clientImg" />
-          <img src={Certificate} alt="certificate" className="clientImg" />
+          <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:2d3227b0-2af8-4010-a21d-369985147ef2">
+            <img src={Certificate} alt="certificate" className="clientImg" />
+          </a>
         </div>
 
       </div>
@@ -47,19 +59,19 @@ const Contact = () => {
           <button type='submit' value='Send' className="submitBtn" >Submit</button>
           <div className="links">
             <a href="https://www.codingninjas.com/studio/profile/397af0b0-b8f4-4083-9fdd-f68d93710906">
-            <img src={codingninjaIcon} alt="CodingNinja" className="link" />
+              <img src={codingninjaIcon} alt="CodingNinja" className="link" />
             </a>
             <a href="https://www.linkedin.com/in/abhay-patle-043694235/">
-            <img src={LinkedinIcon} alt="Linkedin" className="link" />
+              <img src={LinkedinIcon} alt="Linkedin" className="link" />
             </a>
             <a href="https://www.hackerrank.com/dashboard">
-            <img src={HackerRankIcon} alt="HackerRank" className="link" />
+              <img src={HackerRankIcon} alt="HackerRank" className="link" />
             </a>
             <a href="https://www.instagram.com/a_star_abhay/">
-            <img src={InstagramIcon} alt="Instagram" className="link" />
+              <img src={InstagramIcon} alt="Instagram" className="link" />
             </a>
             <a href="https://github.com/Abhaypatle6">
-            <img src={GithubIcon} alt="Github" className="link" />
+              <img src={GithubIcon} alt="Github" className="link" />
             </a>
           </div>
         </form>
